@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+		<script src='js/jquery.min.js'></script>
+		<script src='bootstrap-3.3.7-dist/js/bootstrap.min.js'></script>
+
+		<script>
+			$(function(){
+				$('.msw_nav .navbar-nav>li').click(function(event) {
+					$(this).addClass('selected');
+					$(this).siblings('li').removeClass('selected');
+				});
+			})
+
+		</script>
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			.msw_nav{
+				background-color: white;
+				border-bottom: 2px solid #0ba1e4;
+				padding: 15px 0;
+			}
+			.msw_nav .navbar-brand{
+				padding: 0px 15px;
+			}
+			.msw_nav .msw_ul{
+				font-size: 18px;
+			}
+			.msw_nav .navbar-nav>li>a:hover{
+				color: #0ba1e4;
+			}
+			.msw_nav .navbar-nav>li{
+				position: relative;
+			}
+			.msw_nav .navbar-nav>li.selected::after{
+				content: '';
+				width: 20px;
+				height: 1px;
+				background: #0ba1e4;
+				position: absolute;
+				left: 50%;
+				margin-left: -10px;
+			}
+			.msw_nav .navbar-nav>li.selected a{
+				color: #0ba1e4;
+			}
+			.top{
+				position: fixed;
+				right: 10px;
+				bottom: 100px;
+				border: 1px solid #0ba1e4;
+			}
+			.top span{
+				font-size: 30px;
+				color: #0ba1e4;
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+			}
+			#jum2 .row .glyphicon {
+					font-size:200px;
+
+				}
+			
+			#jum2 .row .thumbnail:hover{
+				background-color:blue;
+				color:white;
+			}
+
+			#jum3 .row .icon2:hover{
+				background-color:blue;
+				color: white;
+				transition: 1s;
+				padding: 0px  0px 40px 0px;
+				margin: -20px 0px 0px 10px;
+			}
+			.h3{
+				cursor: pointer;
+				border-radius: 10px;
+				border: 1px solid blue;
+				width: 150px;
+				height: 30px;
+				margin: 0px 0px  0px 715px ;
+			}
+			
+				
+			
+		/* 	.div01{
+				background-color:#eeeeee;
+				position:absolute;
+				
+			}
+			.div02{
+			
+				border:1px solid green;
+			}
+			.div03{
+			
+				border:1px solid green;
+			} */
+			#jum1 .row .meiguo{
+					width: 100px;
+					margin:7px;
+					height: 100px;
+					border:1px solid red;
+					float:left;
+				}
+
+			#jum1 p{
+				cursor:pointer;
+			}
+ 			
+ 			.imgcl1{
+ 				filter:grayscale();
+ 				cursor:pointer;
+ 				
+ 			}
+
+ 			.imgcl1:hover{
+				background-color:white;
+				filter:none;
+				/* border:1px solid blue; */
+ 			}
+			.mian1{
+				cursor: pointer;
+				border-radius: 10px;
+				border: 1px solid white;
+				width: 150px;
+				height: 30px;
+				margin: 0px 0px  0px 515px ;
+				color:white;
+				transition:1s;
+			}
+			
+			.mian1:hover{
+				background-color:white;
+				color:skyblue;
+
+
+			}
+
+
+
+			@media (max-width: 767px) {
+				.msw_nav{
+					padding: 0;
+				}
+				.msw_nav .navbar-nav>li.selected::after{
+					content: '';
+					width: 0;
+				}
+				.top{
+					position: fixed;
+					right: 10px;
+					bottom: 10px;
+					border: none;
+					background: white;
+					border-radius: 50%;
+				}
+				.top span{
+					font-size: 30px;
+					color: #333;
+					display: inline-block;
+					width: 50px;
+					height: 50px;
+					text-align: center;
+					line-height: 50px;
+				}
+				.jumbotron .h1{
+					margin:2px auto;
+				}
+				.line{
+   					margin: 30px auto 26px;
+   					border-width: 2px;
+    				width: 80px;
+					}
+				
+				#jum1{
+					background-color:white;
+				}
+				
+			 	
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-default msw_nav">
+		  <div class="container">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">
+		      	<img  class="logo1" src="img/logo.png" alt="">
+		      </a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav navbar-right msw_ul">
+		        <li class="selected"><a href="#">首页</a></li>
+		        <li><a href="#">签证指南</a></li>
+		        <li><a href="#">签证加急</a></li>
+		        <li><a href="#">签证服务</a></li>
+		        <li><a href="#">签证资讯</a></li>
+		        <li><a href="#">资料下载</a></li>
+
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+
+		</nav>	
+			
+		<div class="top">
+			<span class="glyphicon glyphicon-arrow-up">				
+			</span>
+		</div>
+
+
+		<div id="bodyimg">	
+
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+			    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			 
+			  </ol>
+
+			  <!-- Wrapper for slides -->
+			 <div class="carousel-inner" role="listbox">
+			    <div class="item active">
+			     	<img src="img/banner1.jpg" alt="...">
+			      <div class="carousel-caption">
+			        ...
+			      </div>
+			    </div>
+			    <div class="item">
+			      <img src="img/banner2.jpg" alt="...">
+			      <div class="carousel-caption">
+			      
+			      </div>
+			    </div>
+			  
+			  </div>
+
+			  <!-- Controls -->
+			  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+			    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			    <span class="sr-only">Previous</span>
+			  </a>
+			  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+			    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			    <span class="sr-only">Next</span>
+			  </a>
+			</div>
+		
+		</div>
+
+
+		<div class="jumbotron container" id="jum1" style="background-color:white";>
+
+ 			<h1 class="text-center">				
+				我们的成绩
+ 			</h1>
+ 			
+
+ 			<p class="text-center">
+ 				2018年1月1日至2018年12月30日，我们的接待数据。
+  			<p>
+  								<br>
+
+  			<div class="row">
+				<div class="col-xs-6 col-md-3">
+			   		<a  class="thumbnail">
+			  			<h1 class="text-center">18397</h1>
+			  		 	<h3 class="text-center">累计受累申请</h3>
+			  		 </a>
+			 	</div>
+			
+				<div class="col-xs-6 col-md-3">
+			   		<a  class="thumbnail">
+			  			<h1 class="text-center">98.8%</h1>
+			  		 	<h3 class="text-center">综合通过率</h3>
+			  		 </a>
+			 	</div>
+
+			 	<div class="col-xs-6 col-md-3">
+			   		<a href="#eeeeee" class="thumbnail">
+			  			<h1 class="text-center">3273</h1>
+			  		 	<h3 class="text-center"> 加急申请人数</h3>
+			  		 </a>
+			 	</div>
+
+			 	<div class="col-xs-6 col-md-3">
+			   		<a href="#eeeeee" class="thumbnail">
+			  			<h1 class="text-center">100%</h1>
+			  		 	<h3 class="text-center">加急成功率</h3>
+			  		 </a>
+			 	</div>
+			</div>
+
+		</div>
+
+
+		<div class="jumbotron" id="jum2" >
+			<div class="container">
+	  			<h1 class="text-center">
+	  				我们的优势
+	  			</h1>
+	  				<p class="text-center">
+	 					每一份签证申请都是独立个案，每一位申请人都应该被认真对待。
+	  				<p>
+
+	  			<div class="row">
+	  				<div class="col-xs-6 col-md-3">
+	    				<a href="#" class="thumbnail">
+								<span class="glyphicon glyphicon-arrow-left icon1" id="">
+								
+								</span>
+	     					 <h3 class="text-center">
+	     					 	十一年美签经验
+	     					 </h3>
+	     				 	<p>
+	     				 		2006年开始办理美国签证至今，积累了丰富的首签和拒签再签实用经验。
+	     				 	</p>
+	   					 </a>
+	  				</div>
+				
+				
+			
+	  				<div class="col-xs-6 col-md-3">
+	    			<a href="#" class="thumbnail">
+							<span class="glyphicon glyphicon-arrow-up icon1" id="" >
+							
+							</span>
+	     				 <h3 class="text-center">一对一精准定制</h3>
+	     				 <p>每一位申请人都是独立的签证个案，我们从签证原理开始，为您定制最优方案。</p>
+	   				 </a>
+	  				</div>
+				
+
+	  				<div class="col-xs-6 col-md-3">
+	    			<a href="#" class="thumbnail">
+							<span class="glyphicon glyphicon-arrow-down icon1" id="">
+							
+							</span>
+	     				 <h3 class="text-center">高效率即时响应</h3>
+	     				 <p>遇到任何疑问，您都会在第一时间得到我们的正面回应，并进行相关处理。</p>
+	   				 </a>
+	  				</div>
+			
+
+	  				<div class="col-xs-6 col-md-3">
+	    			<a href="#" class="thumbnail">
+							<span class="glyphicon glyphicon-arrow-right icon1" id="">
+							
+							</span>
+	     				 <h3 class="text-center">精益求精的态度</h3>
+	     				 <p>死磕完美材料，对签证申请流程中的细节一丝不苟，力争最高通过率。</p>
+	   				 </a>
+	  				</div>
+				
+				</div>
+			</div>
+		
+		</div>
+		
+
+		<div class="jumbotron" id="jum3" style="background-color:white">
+			<div class="container" style="background-color:white">
+	  			<h1 class="text-center">我们的服务</h1>
+	  			<p class="text-center">
+	 				与美国非移民签证申请相关的所有服务，我们都提供支持。
+	  			<p>
+					<div class="row">
+					  <div class="col-xs-6 col-md-3">
+					    <a href="#" class="thumbnail icon2">
+					      	<h3 class="text-center">美国加急预约</h3>
+					      	<h4 class="text-center">全程加急办理</h4>
+					      <hr style="background-color:black">
+					      	
+					      	<h4 class="text-center">3个工作日内进馆</h4>
+
+
+					      	<h4 class="text-center">先加急 后付费</h4>
+					      	<h4 class="text-center">100%加急成功</h4>
+					      	<h4 class="text-center">支持全国五大领区</h4>
+					      	<h4 class="text-center">查看所有签证类型</h4>
+					      	<h4 class="text-center" style="border:1px solid blue;width:80px; margin:auto">查看详情</h4>
+					    </a> 
+
+
+
+					  </div>
+					    <div class="col-xs-6 col-md-3">
+					    <a href="#" class="thumbnail icon2">
+					      	<h3 class="text-center">美国加急预约</h3>
+					      	<h4 class="text-center">全程加急办理</h4>
+					      <hr style="background-color:black">
+					      	
+					      	<h4 class="text-center">3个工作日内进馆</h4>
+
+
+					      	<h4 class="text-center">先加急 后付费</h4>
+					      	<h4 class="text-center">100%加急成功</h4>
+					      	<h4 class="text-center">支持全国五大领区</h4>
+					      	<h4 class="text-center">查看所有签证类型</h4>
+					      	<h4 class="text-center" style="border:1px solid blue;width:80px; margin:auto">查看详情</h4>
+					    </a> 
+
+
+					    
+					  </div>
+
+					    <div class="col-xs-6 col-md-3">
+					    <a href="#" class="thumbnail icon2">
+					      	<h3 class="text-center">美国加急预约</h3>
+					      	<h4 class="text-center">全程加急办理</h4>
+					      <hr style="background-color:black">
+					      	
+					      	<h4 class="text-center">3个工作日内进馆</h4>
+
+
+					      	<h4 class="text-center">先加急 后付费</h4>
+					      	<h4 class="text-center">100%加急成功</h4>
+					      	<h4 class="text-center">支持全国五大领区</h4>
+					      	<h4 class="text-center">查看所有签证类型</h4>
+					      	<h4 class="text-center" style="border:1px solid blue;width:80px; margin:auto">查看详情</h4>
+					    </a> 
+
+
+					    
+					  </div>
+
+					    <div class="col-xs-6 col-md-3">
+						    <a href="#" class="thumbnail icon2">
+						      	<h3 class="text-center">
+						      		美国加急预约
+						     	 </h3>
+						      	<h4 class="text-center">
+						      		全程加急办理
+						     	 </h4>
+						     	<hr style="background-color:black">
+						      	
+						      	<h4 class="text-center">
+						      		3个工作日内进馆
+						     	 </h4>
+						      	<h4 class="text-center">
+						      		先加急 后付费
+						     	 </h4>
+						      	<h4 class="text-center">
+						      		100%加急成功
+						      	</h4>
+						      	<h4 class="text-center">
+						      		支持全国五大领区
+						      	</h4>
+						      	<h4 class="text-center">
+						      		查看所有签证类型
+						      	</h4>
+						      	<h4 class="text-center" style="border:1px solid blue;width:80px; margin:auto;">
+						      		查看详情
+						      	</h4>
+						    </a> 
+								
+						     
+					  </div>
+								
+					</div>
+	  				
+	  		</div>
+				
+					<h3 class="text-center h3">查看更多服务</h3>
+		</div>
+		
+
+		<div class="jumbotron" id="jum4" style="background-color:#eeeeee">
+			<div class="text-center " style="background-color:#eeeeee">
+				<h1>
+					客户的鼓励
+				</h1>
+			  	<p>
+			  		
+			  	</p>
+				<p>
+					帮助您解决实际问题，顺利、及时地获得签证，是我们存在的根本价值。									
+				</p>
+				<div class="container" style="background-color:#eeeeee">
+					<div class="row">
+	  					<!-- 	<div class=" col-md-10 ">
+	  						<div class="col-sm-6 col-md-4">
+								<div class="thumbnail div01">
+									<img src="img/rentou1.jpg" alt="">
+									<h4 style="text-align:left;">
+										护照丢了，定了春节行程。11号补好护照约了13号面签，这速度简直惊人，所有的旅行社都说弄不了，来不及了，肯定没戏。多亏了你们，非常感谢！
+									</h4>
+									<h5 style="text-align:left;border:1px solid red;">
+										B1商务签证
+										<span style="margin-right:0px">
+											
+										</span>
+									</h5 >
+
+							   	</div>
+	  						</div>    						  							
+	  					</div> -->
+						<img src="img/rentou.PNG" alt="">
+					</div>
+				</div>
+			</div>	
+
+		</div>
+
+		
+
+
+
+		<div class="jumbotron container" id="jum1" style="background-color:#f5f5f5;">
+
+ 			<h1 class="text-center">				
+				美国签证最新资讯
+ 			</h1>
+ 			
+
+ 			<p class="text-center">
+ 				中岚签证帮您关注最新美国签证相关政策与新闻。
+  			<p>
+  							
+
+  			<div class="row">
+				<div class="col-sm-6 ">
+			   		<a  class="thumbnail">
+			   		
+			   				<img class="meiguo" src="img/meiguo1.jpg"  alt="">
+			  				<p class="text-center" style="size:5; text-align:left;">
+			  					92名中国民工被欠薪受困塞班岛 华...<!-- 裔中介扣钱逃匿 -->	
+							</p>
+			  		 		<h5 class="text-center" style="font-size:2; text-align:left;">
+			  		 			时间：2017-05-09 <br>				  		 									
+								他们大部分来自东北，在去年10月份时，其所在城市的劳<br>
+								务中介公司找到他们，介绍了塞班岛的工作，介给他... <br>								
+								作者：中岚签证 clantrip.com
+							</h5>
+			  		 
+			  		 </a>
+			 	</div>
+			
+				<div class="col-sm-6 ">
+			   		<a  class="thumbnail">
+			   		
+			   				<img class="meiguo" src="img/meiguo1.jpg"  alt="">
+			  				<p class="text-center" style="size:5; text-align:left;">
+			  					92名中国民工被欠薪受困塞班岛 华...<!-- 裔中介扣钱逃匿 -->	
+							</p>
+			  		 		<h5 class="text-center" style="font-size:2; text-align:left;">
+			  		 			时间：2017-05-09 <br>				  		 									
+								他们大部分来自东北，在去年10月份时，其所在城市的劳<br>
+								务中介公司找到他们，介绍了塞班岛的工作，介给他... <br>								
+								作者：中岚签证 clantrip.com
+							</h5>
+			  		 
+			  		 </a>
+			 	</div>
+			
+				<div class="col-sm-6 ">
+			   		<a  class="thumbnail">
+			   		
+			   				<img class="meiguo" src="img/meiguo1.jpg"  alt="">
+			  				<p class="text-center" style="size:5; text-align:left;">
+			  					92名中国民工被欠薪受困塞班岛 华...<!-- 裔中介扣钱逃匿 -->	
+							</p>
+			  		 		<h5 class="text-center" style="font-size:2; text-align:left;">
+			  		 			时间：2017-05-09 <br>				  		 									
+								他们大部分来自东北，在去年10月份时，其所在城市的劳<br>
+								务中介公司找到他们，介绍了塞班岛的工作，介给他... <br>								
+								作者：中岚签证 clantrip.com
+							</h5>
+			  		 
+			  		 </a>
+			 	</div>
+			
+				<div class="col-sm-6 ">
+			   		<a  class="thumbnail">
+			   		
+			   				<img class="meiguo" src="img/meiguo1.jpg"  alt="">
+			  				<p class="text-center" style="size:5; text-align:left;">
+			  					92名中国民工被欠薪受困塞班岛 华...<!-- 裔中介扣钱逃匿 -->	
+							</p>
+			  		 		<h5 class="text-center" style="font-size:2; text-align:left;">
+			  		 			时间：2017-05-09 <br>				  		 									
+								他们大部分来自东北，在去年10月份时，其所在城市的劳<br>
+								务中介公司找到他们，介绍了塞班岛的工作，介给他... <br>								
+								作者：中岚签证 clantrip.com
+							</h5>
+			  		 
+			  		 </a>
+			 	</div>
+			
+
+			<p class="text-center" >
+ 				更多资讯>>>
+  			<p>
+				
+
+
+
+
+
+			</div>
+
+		</div>
+
+		
+		<div class="jumbotron" id="jum2" style="background-color:#e1e1e1;">
+			<div class="container">
+	  			<h1 class="text-center">
+	  				我们的客户
+	  			</h1>
+	  				<p class="text-center">
+	 					他们与中岚建立了合作关系
+	  				<p>
+	  			<div class="row">
+	  				<img src="img/client1.png"  class="imgcl1" alt="">
+	  				<img src="img/client2.png"  class="imgcl1" alt="">
+	  				<img src="img/client3.png"  class="imgcl1" alt="">
+	  				<img src="img/client4.png"  class="imgcl1" alt="">
+	  				<img src="img/client5.png"  class="imgcl1" alt="">
+	  				<img src="img/client6.png"  class="imgcl1" alt="">
+	  				<img src="img/client7.png"  class="imgcl1" alt="">
+	  				<img src="img/client8.png"  class="imgcl1" alt="">
+	  				<img src="img/client9.png"  class="imgcl1" alt="">
+	  				<img src="img/client10.png" class="imgcl1"  alt="">
+	  				<img src="img/client11.png" class="imgcl1"  alt="">
+	  				<img src="img/client12.png" class="imgcl1"  alt="">
+				
+				</div>
+			</div>
+		
+		</div>
+	
+
+
+
+		<div class="jumbotron" id="jum2" style="background-color:skyblue;">
+			<div class="container">
+	  			<h1 class="text-center" style="color:white;">
+	  				更多疑问 全面解答
+	  			</h1>
+	  				<p class="text-center" style="color:white;">
+	 					他们与中岚建立了合作关系
+	  				<p>
+	  			<div class="row">
+	  			<h3 class="text-center mian1">免费咨询</h3>
+				</div>
+			</div>
+		
+		</div>
+
+	 	<div  style="background-color:#363636;">
+			<img src="Img/捕获.PNG" alt="">
+		</div>
+		
+	</body>
+</html>
